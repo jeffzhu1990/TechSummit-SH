@@ -1,5 +1,5 @@
-# 让我们来到Office Add-in动手实验!
+# 欢迎来到Office Add-in动手实验室!
 
-## [MWPL19 - Office Add-in的交互式设计]() 
+## [MWPL19 - Office Add-in的交互式设计](event/index.md) 
 
-## [MWPL07 - Office Add-in数据可视化的最佳实践](chart/chart.md)
+<!-- ## [MWPL07 - Office Add-in数据可视化的最佳实践](chart/index.md) -->
