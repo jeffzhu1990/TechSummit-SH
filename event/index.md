@@ -42,47 +42,47 @@ Script Lab是Microsoft Garage开发的一个Office Add-in。利用Script Lab，�
 2. 新建空白工作簿。
 3. 点击 插入 -> 获取加载项，搜索 Script Lab，选择添加。
   
-![](./images/1.01.png)
+![Exercise 1](./images/1.01.png)
   
 4. 切换到Script Lab页。
   
-![](./images/1.02.png)
+![Exercise 1](./images/1.02.png)
   
 5. 此时您将看到如下图所示的页面。
   
-![](./images/1.03.png)
+![Exercise 1](./images/1.03.png)
 
 ### Task 2 – 使用Script Lab创建测试Add-in
 
 1. 依次点击Code和运行按钮。
   
-![](./images/1.04.png)
+![Exercise 1](./images/1.04.png)
   
 2. Excel右侧将会弹出两个窗格。 左侧的窗格是要运行的代码，右侧的窗格将会在之后运行左侧窗格的代码并呈现一个网页。
   
-![](./images/1.05.png)
+![Exercise 1](./images/1.05.png)
   
 3. 点击"Sample"标签中的"Basic API call"示例。Script Lab将自动在Code窗格加载一个简单示例。
 
-![](./images/1.06.png)
+![Exercise 1](./images/1.06.png)
 
 4. 运行窗格中将会自动出现"Basic API call"。单击它以运行示例。
 
-![](./images/1.07.png)
+![Exercise 1](./images/1.07.png)
 
 5. 选中B2单元格。
 
-![](./images/1.08.png)
+![Exercise 1](./images/1.08.png)
 
 6. 在右侧的运行窗格中，点击"Run Code"按钮。
 
-![](./images/1.09.png)
+![Exercise 1](./images/1.09.png)
 
 7. Code窗格中的代码将会运行。其将会把当前选中区域的背景色设为黄色，并在运行窗格的Console中输出当前选中区域的地址。
 
-![](./images/1.10.png)
+![Exercise 1](./images/1.10.png)
 
-![](./images/1.11.png)
+![Exercise 1](./images/1.11.png)
 
 ## Exercise 2: 使用Excel Events API处理用户与Excel间的交互
 
@@ -135,11 +135,11 @@ async function resetMap() {
 
 3. 运行窗格中将会出现如下所示的提示。点击刷新。
 
-  ![](./images/2.01.png)
+![Exercise 2](./images/2.01.png)
 
 4. 运行窗格将会显示如下图所示的界面。
 
-  ![](./images/2.02.png)
+![Exercise 2](./images/2.02.png)
 
 ### Task 2 – 在加载Add-in时插入初始化数据
 
@@ -195,7 +195,7 @@ async function initialize() {
 
 3. 刷新运行窗格。当代码运行完毕后，loadSampleData()方法将会在Excel中增加一个名为"Bing Maps"的Sheet，并在其中插入示例数据。
 
-![](./images/2.03.png)
+![Exercise 2](./images/2.03.png)
 
 ### Task 3 – 注册事件以在用户选中不同单元格时自动更新Bing Maps
 
@@ -343,7 +343,7 @@ async function onBingMapsSelectionChanged(event) {
 
 9. 点击"Register"按钮。在A2:D8区域中选中不同的单元格，运行窗格中的Bing Maps会自动聚焦到该地址。这是因为SelectionChanged事件被触发后，onBingMapsSelectionChanged()方法被调用了。
 
-  ![](./images/2.04.png)
+![Exercise 2](./images/2.04.png)
 
 10. 点击"UnRegister"按钮。在A2:D8区域中选中单元格时，Bing Maps不会自动更新。
 
@@ -384,7 +384,7 @@ async function registerEvents() {
 
 3. 重新刷新运行窗格，并点击"Register"按钮。切换到其他Worksheet，如"Sheet1"上，此时会发现运行窗格中的BingMaps消失，并且Console中输出了Worksheet.Deactivated事件的信息。再切换回"Bing Maps" Worksheet，可以发现运行窗格中的BingMaps重新出现了，同样的，Console中也输出了Worksheet.Activated事件的信息。
 
-![](./images/2.05.png)
+![Exercise 2](./images/2.05.png)
 
 至此，我们的实验就完成了。我们的参考代码可以从[GitHub](https://gist.github.com/73ee5fa0dd2f28ce08d15397f7c3a55d)上获取，并使用Script Lab的导入功能进行导入。
 

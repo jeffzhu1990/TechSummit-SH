@@ -146,7 +146,9 @@ await Excel.run(async (context) => {
 })
 ```
 4. 在上面的代码里，我们将trendline的颜色设置为绿色，把trendline的计算公式显示出来，并将趋势线的样式稍微改变了一下，结果如下图
+
   ![动手实验2](images/11.png?raw=true)
+
 5. 同样的，如果不再需要这个trendline，我们也可以通过API将其删除
 ```js
 await Excel.run(async (context) => {
