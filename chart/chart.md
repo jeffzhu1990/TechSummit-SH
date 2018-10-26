@@ -206,7 +206,7 @@ Excel.run(function (context) {
  
 ### Exercise 3: 具体的一个数据可视化实践
 在这个练习里，我们将为大家提供一组更加复杂的数据，并为大家提供一个定制好的Chart，在这个联系里大家就可以自己一步一步的通过JS API将其实现，
-下面为样本数据(下载链接)：
+下面为样本数据([下载链接](samples/exercise.xlsx))：
 
 ![动手实验3](images/14.png?raw=true)
 
