@@ -1,102 +1,98 @@
-# Hands-on lab
+# Office Add-in的交互式设计
 
-## Office Add-in的交互式设计
+## 简介
 
-### 简介
-
-Office Add-in是扩展Office功能的现代技术。利用丰富的Office JavaScript API，开发者可以对Office文档进行各种操作。在新版本的Office中，我们发布了一套全新的事件相关的API。从此Add-in开发者可以检测到用户对Office文档的交互操作，从而对其进行自动化、针对性的响应。这个课程包括Script Lab的基本使用方式，及使用Excel Events API制作一个可响应用户交互的Add-in。
+Office Add-in是扩展Office功能的新一代技术。利用丰富的Office JavaScript API，开发者可以对Office文档进行各种操作。在新版本的Office中，我们发布了一套全新的事件相关的API。从此Add-in开发者可以检测到用户对Office文档的交互操作，从而对其进行针对性的响应。这个课程包括对Script Lab基本使用方式的介绍，及使用Excel Events API制作一个可响应用户交互的Add-in的示例。
 
 ### 动手实验的目标
 
-这个实验将会向您展示如何
+这个实验将会向您展示
 
-  * 使用Script Lab创建一个测试用的Add-in
-  * 使用Excel Events API处理用户与Excel间的交互
+* 如何使用Script Lab创建一个测试用的Add-in
+* 如何使用Excel Events API处理用户与Excel间的交互
 
 ### 系统需求
 
 您需要安装
 
-  * Windows10
-  * Office365或Office2016/2019
+* Windows10
+* Office365或Office2016/2019
 
 ### 配置
 
 您需要执行以下步骤来为这次实验准备环境
 
-  1. 安装Microsoft Windows 10.
-  1. 安装Microsoft Office 365或者Microsoft Office 2016/2019
+1. 安装Microsoft Windows 10.
+2. 安装Microsoft Office 365或者Microsoft Office 2016/2019
 
 ### 练习
 
-这个动手实验室包含了以下的练习
+本次动手实验包含以下几个部分
 
-  1. 使用Script Lab创建一个测试用的Add-in
-  1. 使用Excel Events API处理用户与Excel间的交互
-
-完成这个实验大概需要: *30到45 分钟*.
+1. 使用Script Lab创建一个测试用的Add-in
+2. 使用Excel Events API处理用户与Excel间的交互
 
 ## Exercise 1: 使用Script Lab创建一个测试用的Add-in
 
 ### Task 1 – 获取Script Lab
 
-Script Lab是Microsoft Garage开发的一个Office Add-in。利用Script Lab，用户可以快速学习和测试Office JavaScript APIs，并可以快速进行产品原型开发验证想法。
+Script Lab是Microsoft Garage开发的一个Office Add-in。利用Script Lab，用户可以快速学习和测试Office JavaScript APIs，并可以快速进行产品原型开发以验证想法。
 
-  1. 启动Excel。
-  2. 新建空白工作簿。
-  3. 点击 插入 -> 获取加载项，搜索 Script Lab，选择添加。
+1. 启动Excel。
+2. 新建空白工作簿。
+3. 点击 插入 -> 获取加载项，搜索 Script Lab，选择添加。
   
-  ![](./images/1.01.png)
+![](./images/1.01.png)
   
-  4. 切换到Script Lab页。
+4. 切换到Script Lab页。
   
-  ![](./images/1.02.png)
+![](./images/1.02.png)
   
-  5. 此时你将看到如下图所示的页面。
+5. 此时您将看到如下图所示的页面。
   
-  ![](./images/1.03.png)
+![](./images/1.03.png)
 
 ### Task 2 – 使用Script Lab创建测试Add-in
 
-  1. 依次点击Code和运行按钮。
+1. 依次点击Code和运行按钮。
   
-  ![](./images/1.04.png)
+![](./images/1.04.png)
   
-  2. Excel右侧将会弹出两个窗格。 左侧的窗格是要运行的代码，右侧的窗格将会在之后运行左侧窗格的代码并呈现一个网页。
+2. Excel右侧将会弹出两个窗格。 左侧的窗格是要运行的代码，右侧的窗格将会在之后运行左侧窗格的代码并呈现一个网页。
   
-  ![](./images/1.05.png)
+![](./images/1.05.png)
   
-  3. 点击"Sample"标签中的"Basic API call"示例。Script Lab将自动在Code窗格加载一个简单示例。
-  
-  ![](./images/1.06.png)
-  
-  4. 运行窗格中将会自动出现"Basic API call"。单击它以运行示例。
-  
-  ![](./images/1.07.png)
-  
-  5. 选中B2单元格。
-  
-  ![](./images/1.08.png)
-  
-  6. 在右侧的运行窗格中，点击"Run Code"按钮。
-  
-  ![](./images/1.09.png)
-  
-  7. Code窗格中的代码将会运行。其将会把当前选中区域的背景色设为黄色，并在运行窗格的Console中输出当前选中区域的地址。
-  
-  ![](./images/1.10.png)
+3. 点击"Sample"标签中的"Basic API call"示例。Script Lab将自动在Code窗格加载一个简单示例。
 
-  ![](./images/1.11.png)
+![](./images/1.06.png)
+
+4. 运行窗格中将会自动出现"Basic API call"。单击它以运行示例。
+
+![](./images/1.07.png)
+
+5. 选中B2单元格。
+
+![](./images/1.08.png)
+
+6. 在右侧的运行窗格中，点击"Run Code"按钮。
+
+![](./images/1.09.png)
+
+7. Code窗格中的代码将会运行。其将会把当前选中区域的背景色设为黄色，并在运行窗格的Console中输出当前选中区域的地址。
+
+![](./images/1.10.png)
+
+![](./images/1.11.png)
 
 ## Exercise 2: 使用Excel Events API处理用户与Excel间的交互
 
-本练习将会展示如何在Office Add-in中嵌入外部服务，如何使用Office JavaScript API向文档中写入数据，以及如何基于用户在Excel中的交互操作自动更新Office Add-in。
+本练习将会展示如何在Office Add-in中嵌入外部服务，如何使用Office JavaScript API向文档中写入数据，以及如何基于用户在Excel中的交互操作自动更新Office Add-in的内容。
 
-本练习将会基于Exercise 1。开始前，请确认Code窗格和运行窗格已经打开。"Basic API call"示例已经载入并可以运行。
+本练习基于Exercise 1。开始前，请确认Code窗格和运行窗格已经打开。"Basic API call"示例已经载入并可以运行。
 
 ### Task 1 – 在Office Add-in中载入Bing Maps
 
-1. 在Code窗格的"HTML"标签中，删除所有代码后，输入以下代码来准备调用Bing Maps API。
+1. 在Code窗格的"HTML"标签中，删除所有代码后，输入以下代码来准备调用Bing Maps API的环境。
 
 ```HTML
 <script type='text/javascript' src='https://www.bing.com/api/maps/mapcontrol'></script>
@@ -104,7 +100,7 @@ Script Lab是Microsoft Garage开发的一个Office Add-in。利用Script Lab，�
 <div id='myMap' style='width: 100vw; height: 90vh;'></div>
 ```
 
-2. 在Code窗格的"脚本"标签中，删除所有代码后，输入以下代码。以下代码调用了Bing Maps的API，加载了Bing Maps并在网页上显示。
+2. 在Code窗格的"脚本"标签中，删除所有代码后，输入以下代码。以下代码调用了Bing Maps的API，加载了Bing Maps并在Office Add-in中显示。
 
 ```JavaScript
 var map;
@@ -147,7 +143,7 @@ async function resetMap() {
 
 ### Task 2 – 在加载Add-in时插入初始化数据
 
-1. 在Code窗格的"脚本"标签中，加入以下代码。以下代码首先检测名为"Bing Maps"的Sheet是否存在。如果不存在则新建该Sheet。之后在该Sheet上的A1:D8区域插入了示例数据，并对A1:D1区域的样式进行了处理。
+1. 在Code窗格的"脚本"标签中，加入以下代码。以下代码首先检测名为"Bing Maps"的工作表是否存在。如果不存在则新建该工作表。之后在该工作表上的A1:D8区域插入了示例数据，并对A1:D1区域的样式进行了处理。
 
 ```JavaScript
 var sheetMap;
@@ -188,7 +184,6 @@ async function loadSampleData() {
 
 ```JavaScript
 async function initialize() {
-
     await resetMap();
 
     /* BEGIN: 需要加入的代码段 */
@@ -200,7 +195,7 @@ async function initialize() {
 
 3. 刷新运行窗格。当代码运行完毕后，loadSampleData()方法将会在Excel中增加一个名为"Bing Maps"的Sheet，并在其中插入示例数据。
 
-  ![](./images/2.03.png)
+![](./images/2.03.png)
 
 ### Task 3 – 注册事件以在用户选中不同单元格时自动更新Bing Maps
 
@@ -208,31 +203,18 @@ async function initialize() {
 
 ```Html
 <div class='buttonGroup'>
-
     <button class="ms-Button ms-Button--compound" id="registerEvents">
-
         <span class="ms-Button-icon">
-
             <i class="ms-Icon ms-Icon--plus"></i>
-
         </span>
-
         <span class="ms-Button-label">Register</span>
-
     </button>
-
     <button class="ms-Button ms-Button--compound" id="unRegisterEvents">
-
         <span class="ms-Button-icon">
-
             <i class="ms-Icon ms-Icon--plus"></i>
-
         </span>
-
         <span class="ms-Button-label">UnRegister</span>
-
     </button>
-
 </div>
 ```
 
@@ -240,17 +222,12 @@ async function initialize() {
 
 ```CSS
 .buttonGroup {
-
     height: 90px;
-
 }
 
 .buttonGroup .ms-Button {
-
     float: left;
-
     margin: 10px;
-
 }
 ```
 
@@ -258,17 +235,12 @@ async function initialize() {
 
 ```JavaScript
 async function initialize() {
-
     await resetMap();
-
     await loadSampleData();
 
     /* BEGIN: 需要加入的代码段 */
-
     $("#registerEvents").click(() => tryCatch(registerEvents));
-
     $("#unRegisterEvents").click(() => tryCatch(unRegisterEvents));
-
     /* END: 需要加入的代码段 */
 }
 ```
@@ -279,59 +251,37 @@ async function initialize() {
 var dictHandlers = [];
 
 async function registerEvents() {
-
 }
 
 async function unRegisterEvents() {
-
 }
 
 async function onBingMapsSelectionChanged(event) {
-
 }
 
 function displayMap(country, capital, latitude, longitude) {
-
     if (map == null) resetMap();
-
     map.setView({
-
         center: new Microsoft.Maps.Location(latitude, longitude),
-
     });
-
     var center = map.getCenter();
-
     var infobox = new Microsoft.Maps.Infobox(center, {
-
         title: capital,
-
         description: country
-
     });
-
     infobox.setMap(map);
-
 }
 
 /** Default helper for invoking an action and handling errors. */
 
 asyncfunctiontryCatch(callback) {
-
     try {
-
         awaitcallback();
-
     }
-
     catch (error) {
-
         OfficeHelpers.UI.notify(error);
-
         OfficeHelpers.Utilities.log(error);
-
     }
-
 }
 ```
 
@@ -339,19 +289,12 @@ asyncfunctiontryCatch(callback) {
 
 ```JavaScript
 async function registerEvents() {
-
     await Excel.run(async (context) => {
-
         var worksheetBingMaps = context.workbook.worksheets.getItem("Bing Maps");
-
         dictHandlers.push(worksheetBingMaps.onSelectionChanged.add(onBingMapsSelectionChanged));
-
         await context.sync();
-
         console.log("Event registered succcessfully on Bing Maps worksheet");
-
     });
-
 }
 ```
 
@@ -359,19 +302,13 @@ async function registerEvents() {
 
 ```JavaScript
 async function unRegisterEvents() {
-
     for (var i = 0; i < dictHandlers.length; i++) {
-
         await Excel.run(dictHandlers[i].context, async function (context) {
-
             dictHandlers[i].remove();
-
         });
-
     }
 
     console.log("All " + dictHandlers.length + " events are unregistered.");
-
     dictHandlers = [];
 }
 ```
@@ -380,47 +317,31 @@ async function unRegisterEvents() {
 
 ```JavaScript
 async function onBingMapsSelectionChanged(event) {
-
     console.log(JSON.stringify(event));
-
     await Excel.run(async (context) => {
-
         var worksheet = context.workbook.worksheets.getItem(event.worksheetId);
-
         var range = worksheet.getRange(event.address);
-
         range.load();
-
         await context.sync();
 
         if (range.columnIndex < 4) {
-
             range = range.getOffsetRange(0, 0 - range.columnIndex).getAbsoluteResizedRange(1, 4);
-
             range.load("values");
-
             await context.sync();
 
             var country = range.values[0][0];
-
             var capital = range.values[0][1];
-
             var latitude = range.values[0][2];
-
             var longitude = range.values[0][3];
-
             displayMap(country, capital, latitude, longitude);
-
         }
-
     })
-
 }
 ```
 
 8. 刷新运行窗格。
 
-9. 点击"Register"按钮。在A2:D8区域中选中不同的单元格，运行窗格中的Bing Maps会自动移动到该地址。这是因为OnSelectionChanged事件被触发后，onBingMapsSelectionChanged()方法被调用了。
+9. 点击"Register"按钮。在A2:D8区域中选中不同的单元格，运行窗格中的Bing Maps会自动聚焦到该地址。这是因为SelectionChanged事件被触发后，onBingMapsSelectionChanged()方法被调用了。
 
   ![](./images/2.04.png)
 
@@ -432,19 +353,13 @@ async function onBingMapsSelectionChanged(event) {
 
 ```JavaScript
 async function onWorksheetActivated(event) {
-
     console.log(JSON.stringify(event));
-
     $("#myMap").show();
-
 }
 
 async function onWorksheetDeactivated(event) {
-
     console.log(JSON.stringify(event));
-
     $("#myMap").hide();
-
 }
 ```
 
@@ -452,27 +367,18 @@ async function onWorksheetDeactivated(event) {
 
 ```JavaScript
 async function registerEvents() {
-
     await Excel.run(async (context) => {
-
         var worksheetBingMaps = context.workbook.worksheets.getItem("Bing Maps");
-
         dictHandlers.push(worksheetBingMaps.onSelectionChanged.add(onBingMapsSelectionChanged));
 
         /* BEGIN: 需要加入的代码段 */
-
         dictHandlers.push(worksheetBingMaps.onActivated.add(onWorksheetActivated));
-
         dictHandlers.push(worksheetBingMaps.onDeactivated.add(onWorksheetDeactivated));
-   
         /* BEGIN: 需要加入的代码段 */
 
         await context.sync();
-
         console.log("Event registered succcessfully on Bing Maps worksheet");
-
     });
-
 }
 ```
 
