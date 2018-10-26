@@ -1,4 +1,4 @@
-﻿# Hands-on lab
+# Hands-on lab
 
 ## Office Add-in的交互式设计
 
@@ -34,7 +34,7 @@ Office Add-in是扩展Office功能的现代技术。利用丰富的Office JavaSc
   1. 使用Script Lab创建一个测试用的Add-in
   1. 使用Excel Events API处理用户与Excel间的交互
 
-完成这个实验大概需要: *30 to 45 分钟*.
+完成这个实验大概需要: *30到45 分钟*.
 
 ## Exercise 1: 使用Script Lab创建一个测试用的Add-in
 
@@ -43,29 +43,47 @@ Office Add-in是扩展Office功能的现代技术。利用丰富的Office JavaSc
 Script Lab是Microsoft Garage开发的一个Office Add-in。利用Script Lab，用户可以快速学习和测试Office JavaScript APIs，并可以快速进行产品原型开发验证想法。
 
   1. 启动Excel。
-  1. 新建空白工作簿。
-  1. 点击 插入 -> 获取加载项，搜索 Script Lab，选择添加。
+  2. 新建空白工作簿。
+  3. 点击 插入 -> 获取加载项，搜索 Script Lab，选择添加。
+  
   ![](./images/1.01.png)
-  1. 切换到Script Lab页。
+  
+  4. 切换到Script Lab页。
+  
   ![](./images/1.02.png)
-  1. 此时你将看到如下图所示的页面。
+  
+  5. 此时你将看到如下图所示的页面。
+  
   ![](./images/1.03.png)
 
 ### Task 2 – 使用Script Lab创建测试Add-in
 
   1. 依次点击Code和运行按钮。
+  
   ![](./images/1.04.png)
-  1. Excel右侧将会弹出两个窗格。 左侧的窗格是要运行的代码，右侧的窗格将会在之后运行左侧窗格的代码并呈现一个网页。
+  
+  2. Excel右侧将会弹出两个窗格。 左侧的窗格是要运行的代码，右侧的窗格将会在之后运行左侧窗格的代码并呈现一个网页。
+  
   ![](./images/1.05.png)
-  1. 点击"Sample"标签中的"Basic API call"示例。Script Lab将自动在Code窗格加载一个简单示例。
+  
+  3. 点击"Sample"标签中的"Basic API call"示例。Script Lab将自动在Code窗格加载一个简单示例。
+  
   ![](./images/1.06.png)
-  1. 运行窗格中将会自动出现"Basic API call"。单击它以运行示例。
+  
+  4. 运行窗格中将会自动出现"Basic API call"。单击它以运行示例。
+  
   ![](./images/1.07.png)
-  1. 选中B2单元格。
+  
+  5. 选中B2单元格。
+  
   ![](./images/1.08.png)
-  1. 在右侧的运行窗格中，点击"Run Code"按钮。
+  
+  6. 在右侧的运行窗格中，点击"Run Code"按钮。
+  
   ![](./images/1.09.png)
-  1. Code窗格中的代码将会运行。其将会把当前选中区域的背景色设为黄色，并在运行窗格的Console中输出当前选中区域的地址。
+  
+  7. Code窗格中的代码将会运行。其将会把当前选中区域的背景色设为黄色，并在运行窗格的Console中输出当前选中区域的地址。
+  
   ![](./images/1.10.png)
 
   ![](./images/1.11.png)
@@ -86,7 +104,7 @@ Script Lab是Microsoft Garage开发的一个Office Add-in。利用Script Lab，�
 <div id='myMap' style='width: 100vw; height: 90vh;'></div>
 ```
 
-1. 在Code窗格的"脚本"标签中，删除所有代码后，输入以下代码。以下代码调用了Bing Maps的API，加载了Bing Maps并在网页上显示。
+2. 在Code窗格的"脚本"标签中，删除所有代码后，输入以下代码。以下代码调用了Bing Maps的API，加载了Bing Maps并在网页上显示。
 
 ```JavaScript
 var map;
@@ -110,6 +128,8 @@ async function resetMap() {
 
 请从下表中随机选择一个API Key替换上文中的credentials字段，以免超过API call的阈值。
 
+|Bing Maps API key|
+|---------------------------------------------------------------------|
 | Ag8fZE-sTZQnyOiZRZj4OFcXFJ9b\_2pIlhk-QxU42H2WJLwnc\_ZS7z\_Z3S66UjMX |
 | Ag6FUwrN6Ui0sTuYoIJvDzDE1IcMBYVW9w-guq6E8p4gjo6JaxaTwWiNYVoqy2U8 |
 | AjkozWF3gpH3MOVuTlgVVdUNh5O1jHDwLMDvHNrcirUdywjD3500hwBuCAJLb201 |
@@ -117,10 +137,11 @@ async function resetMap() {
 | Atb-ksaA4TojV9DhXSvF5WKTogD1uJCfA7vhlobFe1XqsGmAf1P9r0j\_mh1y67VT |
 | AlNICD-WXPGSr86GtlHeBJpQGjApv\_l6jIHCfiqhIqzLf9zeASqdGNAcaHs6WF8F |
 
-1. 运行窗格中将会出现如下所示的提示。点击刷新。
+3. 运行窗格中将会出现如下所示的提示。点击刷新。
 
   ![](./images/2.01.png)
-1. 运行窗格将会显示如下图所示的界面。
+
+4. 运行窗格将会显示如下图所示的界面。
 
   ![](./images/2.02.png)
 
@@ -163,7 +184,7 @@ async function loadSampleData() {
 }
 ```
 
-1. 修改initialize()方法，加入下文中标注的代码来加载示例数据。
+2. 修改initialize()方法，加入下文中标注的代码来加载示例数据。
 
 ```JavaScript
 async function initialize() {
@@ -177,7 +198,7 @@ async function initialize() {
 }
 ```
 
-1. 刷新运行窗格。当代码运行完毕后，loadSampleData()方法将会在Excel中增加一个名为"Bing Maps"的Sheet，并在其中插入示例数据。
+3. 刷新运行窗格。当代码运行完毕后，loadSampleData()方法将会在Excel中增加一个名为"Bing Maps"的Sheet，并在其中插入示例数据。
 
   ![](./images/2.03.png)
 
@@ -215,7 +236,7 @@ async function initialize() {
 </div>
 ```
 
-1. 在Code窗格的"样式"标签中，删除所有代码后，加入以下代码来调整两个按钮的位置。
+2. 在Code窗格的"样式"标签中，删除所有代码后，加入以下代码来调整两个按钮的位置。
 
 ```CSS
 .buttonGroup {
@@ -233,7 +254,7 @@ async function initialize() {
 }
 ```
 
-1. 修改initialize()方法，加入下文中标红的代码来注册两个按钮的单击事件。
+3. 修改initialize()方法，加入下文中标注的代码来注册两个按钮的单击事件。
 
 ```JavaScript
 async function initialize() {
@@ -252,7 +273,7 @@ async function initialize() {
 }
 ```
 
-1. 在Code窗格的"脚本"标签中，加入以下代码。下列代码包含注册事件，删除事件和事件响应函数的声明。并且包含了两个辅助函数displayMap()和tryCatch()。displayMap()会基于给定的参数调整Bing Maps。tryCatch()会捕获异常并在UI上弹出错误提示。这两个函数会在之后使用到。
+4. 在Code窗格的"脚本"标签中，加入以下代码。下列代码包含注册事件，删除事件和事件响应函数的声明。并且包含了两个辅助函数displayMap()和tryCatch()。displayMap()会基于给定的参数调整Bing Maps。tryCatch()会捕获异常并在UI上弹出错误提示。这两个函数会在之后使用到。
 
 ```JavaScript
 var dictHandlers = [];
@@ -314,7 +335,7 @@ asyncfunctiontryCatch(callback) {
 }
 ```
 
-1. 实现registerEvents()方法。以下代码首先获取了名为"Bing Maps"的Sheet。然后对其调用了onSelectionChanged.add()方法，从而注册事件。注册事件后的返回值被存储到了dictHandlers中，以备之后删除事件时使用。这里我们使用了一个数组来存储注册事件后的返回值，这是因为用户可能多次点击"Register"按钮。
+5. 实现registerEvents()方法。以下代码首先获取了名为"Bing Maps"的Sheet。然后对其调用了onSelectionChanged.add()方法，从而注册事件。注册事件后的返回值被存储到了dictHandlers中，以备之后删除事件时使用。这里我们使用了一个数组来存储注册事件后的返回值，这是因为用户可能多次点击"Register"按钮。
 
 ```JavaScript
 async function registerEvents() {
@@ -334,7 +355,7 @@ async function registerEvents() {
 }
 ```
 
-1. 实现unRegisterEvents方法。以下代码遍历了dictHandlers，并调用了其remove()方法来删除事件。
+6. 实现unRegisterEvents方法。以下代码遍历了dictHandlers，并调用了其remove()方法来删除事件。
 
 ```JavaScript
 async function unRegisterEvents() {
@@ -355,7 +376,7 @@ async function unRegisterEvents() {
 }
 ```
 
-1. 实现onBingMapsSelectionChanged方法。以下代码首先从参数event中获取了Worksheet的ID和触发事件的address。基于这两个信息，我们可以知道是哪个range触发了SelectionChanged事件。基于此range，再进一步得到了country，capital，latitude和longitude信息，从而对Bing Maps进行更新。
+7. 实现onBingMapsSelectionChanged方法。以下代码首先从参数event中获取了Worksheet的ID和触发事件的address。基于这两个信息，我们可以知道是哪个range触发了SelectionChanged事件。基于此range，再进一步得到了country，capital，latitude和longitude信息，从而对Bing Maps进行更新。
 
 ```JavaScript
 async function onBingMapsSelectionChanged(event) {
@@ -397,12 +418,13 @@ async function onBingMapsSelectionChanged(event) {
 }
 ```
 
-1. 刷新运行窗格。
+8. 刷新运行窗格。
 
-1. 点击"Register"按钮。在A2:D8区域中选中不同的单元格，运行窗格中的Bing Maps会自动移动到该地址。这是因为OnSelectionChanged事件被触发后，onBingMapsSelectionChanged()方法被调用了。
+9. 点击"Register"按钮。在A2:D8区域中选中不同的单元格，运行窗格中的Bing Maps会自动移动到该地址。这是因为OnSelectionChanged事件被触发后，onBingMapsSelectionChanged()方法被调用了。
 
   ![](./images/2.04.png)
-1. 点击"UnRegister"按钮。在A2:D8区域中选中单元格时，Bing Maps不会自动更新。
+
+10. 点击"UnRegister"按钮。在A2:D8区域中选中单元格时，Bing Maps不会自动更新。
 
 ### Task 4 – 注册事件以在用户切换到不同的Worksheet时自动显示或隐藏Bing Maps
 
@@ -426,7 +448,7 @@ async function onWorksheetDeactivated(event) {
 }
 ```
 
-1. 修改registerEvents()方法，加入下文中标红的代码来注册Worksheet.Activated和Worksheet.Deactivated事件。
+2. 修改registerEvents()方法，加入下文中标注的代码来注册Worksheet.Activated和Worksheet.Deactivated事件。
 
 ```JavaScript
 async function registerEvents() {
@@ -437,9 +459,13 @@ async function registerEvents() {
 
         dictHandlers.push(worksheetBingMaps.onSelectionChanged.add(onBingMapsSelectionChanged));
 
+        /* BEGIN: 需要加入的代码段 */
+
         dictHandlers.push(worksheetBingMaps.onActivated.add(onWorksheetActivated));
 
         dictHandlers.push(worksheetBingMaps.onDeactivated.add(onWorksheetDeactivated));
+   
+        /* BEGIN: 需要加入的代码段 */
 
         await context.sync();
 
@@ -450,8 +476,9 @@ async function registerEvents() {
 }
 ```
 
-1. 重新刷新运行窗格，并点击"Register"按钮。切换到其他Worksheet，如"Sheet1"上，此时会发现运行窗格中的BingMaps消失，并且Console中输出了Worksheet.Deactivated事件的信息。再切换回"Bing Maps" Worksheet，可以发现运行窗格中的BingMaps重新出现了，同样的，Console中也输出了Worksheet.Activated事件的信息。
+3. 重新刷新运行窗格，并点击"Register"按钮。切换到其他Worksheet，如"Sheet1"上，此时会发现运行窗格中的BingMaps消失，并且Console中输出了Worksheet.Deactivated事件的信息。再切换回"Bing Maps" Worksheet，可以发现运行窗格中的BingMaps重新出现了，同样的，Console中也输出了Worksheet.Activated事件的信息。
 
+![](./images/2.05.png)
 
 至此，我们的实验就完成了。我们的参考代码可以从[GitHub](https://gist.github.com/73ee5fa0dd2f28ce08d15397f7c3a55d)上获取，并使用Script Lab的导入功能进行导入。
 
