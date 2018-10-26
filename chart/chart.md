@@ -42,7 +42,7 @@ Office Add-in平台，允许您构建扩展 Office 应用程序并与 Office 文
 ![动手实验1](images/04.png?raw=true)
  
 #### Task 2 – 加入样本数据
-我们先在Excel的当前表格里左上顶格位置加入以下样本数据用于后续的task
+我们先下载用于练习的Excel文件([下载链接](samples/exercise.xlsx)),并打开“Exercise 1&2”工作簿
 
 ![动手实验1](images/05.png?raw=true)
 
