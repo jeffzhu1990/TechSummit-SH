@@ -3,6 +3,10 @@
 ## 简介
 Office Add-in平台允许您构建扩展 Office 应用程序并与Office文档中的内容进行交互的解决方案。通过Office Add-in可以使用熟悉的 Web 技术，例如 HTML、CSS 和 JavaScript 来扩展 Word、Excel、PowerPoint、OneNote、Project 和 Outlook，并与其进行交互。在本课程中，您将使用我们最新的Excel API对图表进行深度定制，帮助您的应用更好的向用户展示数据。
 
+欢迎加入我们的微信群做进一步的交流。
+
+![](../event/images/qrcode.png)
+
 ### 动手实验的目标
 这个实验将会向您展示
 - 如何使用Script Lab

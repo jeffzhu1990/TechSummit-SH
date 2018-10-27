@@ -4,6 +4,10 @@
 
 Office Add-in是扩展Office功能的新一代技术。利用丰富的Office JavaScript API，开发者可以对Office文档进行各种操作。在新版本的Office中，我们发布了一套全新的事件相关的API。从此Add-in开发者可以检测到用户对Office文档的交互操作，从而对其进行针对性的响应。这个课程包括对Script Lab基本使用方式的介绍，及使用Excel Events API制作一个可响应用户交互的Add-in的示例。
 
+欢迎加入我们的微信群做进一步的交流。
+
+![](./images/qrcode.png)
+
 ### 动手实验的目标
 
 这个实验将会向您展示
