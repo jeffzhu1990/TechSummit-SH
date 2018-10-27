@@ -20,8 +20,11 @@ Office Add-in平台允许您构建扩展 Office 应用程序并与Office文档�
 
 ### 练习
 本次动手实验包含以下几个部分:
+
 1\. 使用JS API在Excel里创建一个Chart
+
 2\. 对Chart做深度定制化
+
 3\. 具体的一个数据可视化实践
 
 ## Exercise 1: 使用JS API在Excel里创建一个Chart
@@ -29,6 +32,7 @@ Office Add-in平台允许您构建扩展 Office 应用程序并与Office文档�
 
 ### Task 1 – 启动Script Lab
 在我们开始前，我们需要启动Excel并安装Script Lab
+
 1\. 在Insert tab里点击Get Add-ins . 
 ![动手实验1](images/01.png?raw=true)
 
@@ -69,6 +73,7 @@ await Excel.run(async (context) => {
 
 ### Task 1 – 添加、删除及定制Series 
 在最新发布的API中，我们对Chart的Series系列API做了进一步的扩展，使得开发者可以对其做更多的定制。其中值得说明的是我们允许您对已有的Chart添加、删除series，这样您在做数据可视化时可以更灵活的引用Excel里不同的区域的数据。下面我们就以这个特性简单展示一下Series相关的API。
+
 1\. 在Script Lab里键入如下代码：
 
 ```js
@@ -84,6 +89,7 @@ await Excel.run(async (context) => {
     await context.sync();
 })
 ```
+
 2\. 在Script Lab里点击”Run”,启动运行，我们会在chart里添加一条新的series来展示10月1日至10日的最低温度，如下图：
  ![动手实验2](images/07.png?raw=true)
 
@@ -101,6 +107,7 @@ await Excel.run(async (context) => {
     await context.sync();
 })
 ```
+
 4\. 运行代码得到如下结果：
  ![动手实验2](images/08.png?raw=true)
 
@@ -116,11 +123,13 @@ await Excel.run(async (context) => {
     await context.sync();
 })
 ```
+
 6\. 点击运行按键则可得到如您所需的Chart
  ![动手实验2](images/09.png?raw=true)
  
 ### Task 2 – 添加/删除Trendline
 同时我们在新的API里加入了对Trendline的支持。现在您可以在Chart里对任意一个series添加或删除一个或多个Trendline。
+
 1\. 在代码编辑器键入以下代码
 ```js
 await Excel.run(async (context) => {
@@ -135,6 +144,7 @@ await Excel.run(async (context) => {
 
 2\. 这样我们就很轻松的对最低气温添加了一个Trendline，可以用来展示数据的运行趋势，如下图：
   ![动手实验2](images/10.png?raw=true)
+
 3\. 我们还可以对这个Trendline做一些样式上的定制
 
 ```js
@@ -150,8 +160,10 @@ await Excel.run(async (context) => {
     await context.sync();
 })
 ```
+
 4\. 在上面的代码里，我们将trendline的颜色设置为绿色，把trendline的计算公式显示出来，并将趋势线的样式稍微改变了一下，结果如下图
   ![动手实验2](images/11.png?raw=true)
+
 5\. 同样的，如果不再需要这个trendline，我们也可以通过API将其删除
 
 ```js
@@ -168,6 +180,7 @@ await Excel.run(async (context) => {
 
 ### Task 3 – 定制Chart Title和DataLabel
 在新发布的Chart API里，我们还对Chart的Title和DataLabel提供了更多的定制能力。比如原来我们只可以对整个Title设置字体属性，但是现在我们可以对其部分文字进行设置。这样开发者在给用户提供一个chart的时候，可以高亮关键词。
+
 1\.	我们先来对Chart的title做一些改变。在代码编辑器键入以下代码
 
 ```js
@@ -187,6 +200,7 @@ await Excel.run(async (context) => {
 ```
 在代码中，我们将chart的title设置为“上海市十月上旬最低温度“，对“上海市”三个字做了各种字体属性的设置以高亮，结果如下图：
  ![动手实验2](images/12.png?raw=true)
+
 2\.	我们还可以对数据中的每一个单独的datalabel做定制，键入如下代码：
 
 ```js
@@ -223,11 +237,17 @@ await Excel.run(async (context) => {
 ![动手实验3](images/15.png?raw=true)
 
 其中我们需要：
+
 1\. 添加一个空白的line chart
+
 2\. 添加一个series，其数值为收入
+
 3\. 将chart的标题设置为“七月份销售趋势图”，并高亮七月份
+
 4\. 为series添加一个polynomial趋势线
+
 5\. 设置category axis和value axis的区间
+
 6\. 高亮最高销售和最低销售数据点并添加datalabel
 
 
