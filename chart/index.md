@@ -42,7 +42,7 @@ Office Add-in平台允许您构建扩展 Office 应用程序并与Office文档�
 ![动手实验1](images/04.png?raw=true)
  
 ### Task 2 – 加入样本数据
-我们先下载用于练习的Excel文件([下载链接](samples/exercise.xlsx))，并打开“Exercise 1&2”工作簿
+我们先下载用于练习的Excel文件([下载链接](samples/exercise.xlsx))，并打开“Exercise 1&2”工作表
 
 ![动手实验1](images/05.png?raw=true)
 
@@ -100,7 +100,7 @@ await Excel.run(async (context) => {
 ```
 4. 运行代码得到如下结果：
  ![动手实验2](images/08.png?raw=true)
- 
+
 5. 如果我们这时不关心最高温度了，那么我们可以通过如下代码将其从Chart里删除
 ```js
 await Excel.run(async (context) => {
@@ -224,7 +224,7 @@ await Excel.run(async (context) => {
 
 
 大家可以尝试自己写一下这个代码。下面提供一些有用的代码段：
-- 得到练习3的工作簿
+- 得到练习3的工作表
 ```js
 let sheet = context.workbook.worksheets.getItem("Exercise 3");
 ```
