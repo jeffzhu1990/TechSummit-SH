@@ -21,7 +21,9 @@ Office Add-in平台允许您构建扩展 Office 应用程序并与Office文档�
 ### 练习
 本次动手实验包含以下几个部分:
 1\. 使用JS API在Excel里创建一个Chart
+
 2\. 对Chart做深度定制化
+
 3\. 具体的一个数据可视化实践
 
 ## Exercise 1: 使用JS API在Excel里创建一个Chart
@@ -69,6 +71,7 @@ await Excel.run(async (context) => {
 
 ### Task 1 – 添加、删除及定制Series 
 在最新发布的API中，我们对Chart的Series系列API做了进一步的扩展，使得开发者可以对其做更多的定制。其中值得说明的是我们允许您对已有的Chart添加、删除series，这样您在做数据可视化时可以更灵活的引用Excel里不同的区域的数据。下面我们就以这个特性简单展示一下Series相关的API。
+
 1\. 在Script Lab里键入如下代码：
 
 ```js
@@ -121,6 +124,7 @@ await Excel.run(async (context) => {
  
 ### Task 2 – 添加/删除Trendline
 同时我们在新的API里加入了对Trendline的支持。现在您可以在Chart里对任意一个series添加或删除一个或多个Trendline。
+
 1\. 在代码编辑器键入以下代码
 ```js
 await Excel.run(async (context) => {
@@ -168,6 +172,7 @@ await Excel.run(async (context) => {
 
 ### Task 3 – 定制Chart Title和DataLabel
 在新发布的Chart API里，我们还对Chart的Title和DataLabel提供了更多的定制能力。比如原来我们只可以对整个Title设置字体属性，但是现在我们可以对其部分文字进行设置。这样开发者在给用户提供一个chart的时候，可以高亮关键词。
+
 1\.	我们先来对Chart的title做一些改变。在代码编辑器键入以下代码
 
 ```js
@@ -224,10 +229,15 @@ await Excel.run(async (context) => {
 
 其中我们需要：
 1\. 添加一个空白的line chart
+
 2\. 添加一个series，其数值为收入
+
 3\. 将chart的标题设置为“七月份销售趋势图”，并高亮七月份
+
 4\. 为series添加一个polynomial趋势线
+
 5\. 设置category axis和value axis的区间
+
 6\. 高亮最高销售和最低销售数据点并添加datalabel
 
 
