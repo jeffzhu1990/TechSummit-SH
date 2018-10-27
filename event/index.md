@@ -281,7 +281,7 @@ function displayMap(country, capital, latitude, longitude) {
 
 async function tryCatch(callback) {
     try {
-        awaitcallback();
+        await callback();
     }
     catch (error) {
         OfficeHelpers.UI.notify(error);
