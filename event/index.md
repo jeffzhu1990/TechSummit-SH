@@ -391,5 +391,5 @@ async function registerEvents() {
 
 借助于Excel JavaScript APIs中的Events APIs，Add-in开发者可以感知用户与Excel的交互操作，从而在自己的Add-in中做出适当的响应。
 
-除了实验中展示的三个事件外，我们还提供了更加丰富的事件供开发者使用。如果有兴趣对其进行进一步的了解，可以参考[这个链接](https://docs.microsoft.com/zh-cn/office/dev/add-ins/excel/excel-add-ins-events)。
+除了实验中展示的三个事件外，我们还提供了更加丰富的事件供开发者使用。如果有兴趣对其进行进一步的了解，可以参考[这个链接](https://docs.microsoft.com/zh-cn/office/dev/add-ins/excel/excel-add-ins-events)。API的详细定义请参考[这个链接](https://docs.microsoft.com/en-us/javascript/api/excel?view=office-js)。
 
