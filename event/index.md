@@ -104,7 +104,13 @@ Script Lab是Microsoft Garage开发的一个Office Add-in。利用Script Lab，�
 <div id='myMap' style='width: 100vw; height: 90vh;'></div>
 ```
 
-2\. 在Code窗格的"脚本"标签中，删除所有代码后，输入以下代码。以下代码调用了Bing Maps的API，加载了Bing Maps并在Office Add-in中显示。
+2\. 在Code窗格的"资源库"标签中，在最后加入以下代码。以下代码加入了对Bing Maps API 智能补全的支持。
+
+```JavaScript
+@types/bingmaps
+```
+
+3\. 在Code窗格的"脚本"标签中，删除所有代码后，输入以下代码。以下代码调用了Bing Maps的API，加载了Bing Maps并在Office Add-in中显示。
 
 ```JavaScript
 var map;
@@ -137,11 +143,11 @@ async function resetMap() {
 | Atb-ksaA4TojV9DhXSvF5WKTogD1uJCfA7vhlobFe1XqsGmAf1P9r0j\_mh1y67VT |
 | AlNICD-WXPGSr86GtlHeBJpQGjApv\_l6jIHCfiqhIqzLf9zeASqdGNAcaHs6WF8F |
 
-3\. 运行窗格中将会出现如下所示的提示。点击刷新。
+4\. 运行窗格中将会出现如下所示的提示。点击刷新。
 
 ![](./images/2.01.png)
 
-4\. 运行窗格将会显示如下图所示的界面。
+5\. 运行窗格将会显示如下图所示的界面。
 
 ![](./images/2.02.png)
 
@@ -249,19 +255,10 @@ async function initialize() {
 }
 ```
 
-4\. 在Code窗格的"脚本"标签中，加入以下代码。下列代码包含注册事件，删除事件和事件响应函数的声明。并且包含了两个辅助函数displayMap()和tryCatch()。displayMap()会基于给定的参数调整Bing Maps。tryCatch()会捕获异常并在UI上弹出错误提示。这两个函数会在之后使用到。
+4\. 在Code窗格的"脚本"标签中，加入以下代码。下列代码包含包含了两个辅助函数displayMap()和tryCatch()。displayMap()会基于给定的参数调整Bing Maps。tryCatch()会捕获异常并在UI上弹出错误提示。这两个函数会在之后使用到。
 
 ```JavaScript
 var dictHandlers = [];
-
-async function registerEvents() {
-}
-
-async function unRegisterEvents() {
-}
-
-async function onBingMapsSelectionChanged(event) {
-}
 
 function displayMap(country, capital, latitude, longitude) {
     if (map == null) resetMap();
@@ -278,7 +275,7 @@ function displayMap(country, capital, latitude, longitude) {
 
 /** Default helper for invoking an action and handling errors. */
 
-asyncfunctiontryCatch(callback) {
+async function tryCatch(callback) {
     try {
         awaitcallback();
     }
@@ -289,7 +286,7 @@ asyncfunctiontryCatch(callback) {
 }
 ```
 
-5\. 实现registerEvents()方法。以下代码首先获取了名为"Bing Maps"的Sheet。然后对其调用了onSelectionChanged.add()方法，从而注册事件。注册事件后的返回值被存储到了dictHandlers中，以备之后删除事件时使用。这里我们使用了一个数组来存储注册事件后的返回值，这是因为用户可能多次点击"Register"按钮。
+5\. 加入registerEvents()方法。这个方法会注册SelcetionChanged事件。以下代码首先获取了名为"Bing Maps"的Sheet。然后对其调用了onSelectionChanged.add()方法，从而注册事件。注册事件后的返回值被存储到了dictHandlers中，以备之后删除事件时使用。这里我们使用了一个数组来存储注册事件后的返回值，这是因为用户可能多次点击"Register"按钮。
 
 ```JavaScript
 async function registerEvents() {
@@ -302,7 +299,7 @@ async function registerEvents() {
 }
 ```
 
-6\. 实现unRegisterEvents方法。以下代码遍历了dictHandlers，并调用了其remove()方法来删除事件。
+6\. 加入unRegisterEvents方法。这个方法会删除SelectionChanged事件。以下代码遍历了dictHandlers，并调用了其remove()方法来删除事件。
 
 ```JavaScript
 async function unRegisterEvents() {
@@ -317,7 +314,7 @@ async function unRegisterEvents() {
 }
 ```
 
-7\. 实现onBingMapsSelectionChanged方法。以下代码首先从参数event中获取了Worksheet的ID和触发事件的address。基于这两个信息，我们可以知道是哪个range触发了SelectionChanged事件。基于此range，再进一步得到了country，capital，latitude和longitude信息，从而对Bing Maps进行更新。
+7\. 加入onBingMapsSelectionChanged方法。这个方法是SelectionChanged事件的响应函数。以下代码首先从参数event中获取了Worksheet的ID和触发事件的address。基于这两个信息，我们可以知道是哪个range触发了SelectionChanged事件。基于此range，再进一步得到了country，capital，latitude和longitude信息，从而对Bing Maps进行更新。
 
 ```JavaScript
 async function onBingMapsSelectionChanged(event) {
@@ -390,7 +387,7 @@ async function registerEvents() {
 
 ![](./images/2.05.png)
 
-至此，我们的实验就完成了。我们的参考代码可以从[GitHub](https://gist.github.com/73ee5fa0dd2f28ce08d15397f7c3a55d)上获取，并使用Script Lab的导入功能进行导入。
+至此，我们的实验就完成了。我们的参考代码可以从[这里](https://gist.github.com/73ee5fa0dd2f28ce08d15397f7c3a55d)获取，并使用Script Lab的导入功能进行导入。
 
 借助于Excel JavaScript APIs中的Events APIs，Add-in开发者可以感知用户与Excel的交互操作，从而在自己的Add-in中做出适当的响应。
 
